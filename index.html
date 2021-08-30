@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Our own CSS file -->
+    <link rel="stylesheet" href="CSS/styles.css" >
+
+    <title>ShumArmJen tasks</title>
+  </head>
+  <body>
+    <h1>ShumArmJen tasks</h1>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Add Task</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Task List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    
+    <div class="container">
+      <div class="row">
+<!-- Task Form -->
+        <div class="col col-md-6" id="task-box">
+          <form action="example.html" method="post" class="row g-3">
+      
+
+            <label class="form-label" for="taskName">Task:</label>
+            <input class="form-control" type="text" id="taskName" placeholder="Input the task name...">
+            <br>
+
+            <label class="form-label" for="taskOwner">Assigned to:</label>
+            <input class="form-control" type="text" id="taskOwner" placeholder="Who will do this task...">
+            <br>
+
+            <label class="form-label" for="taskDescription">Description:</label>
+            <!-- <input type="text" id="taskDescription">  -->
+            <!-- placeholder="Describe/summarize your task"> -->
+            <textarea  class="form-control" id="taskDescription"> Describe/summarize your task
+
+            </textarea>
+            <br>
+            <label class="form-label" for="taskName">Due Date:</label>
+            <input class="form-control" type="date" id="dueDate">
+            <br>
+            <br>
+            <br>
+
+
+              <label class="form-label" for="status">Status: </label>
+              <br>
+                <select id="status" name="status">
+
+                <label class="form-label" for="status"></label>
+                <option value="To Do">To Do</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Review">Review</option>
+                <option value="Done">Done</option>
+             </select>
+          
+            </form>
+
+            <br>
+          </form>
+          <button input type="submit" class="btn btn-primary">Submit
+          </button>
+       
+        </div>
+<!-- Task Card -->
+        <div class="col"  id="task-box">
+          <div id="myDIV" class="header">
+            <h4>Task already entered</h4>
+
+          </div>
+
+            <h6>Assigned to:</h6>
+            <p>Shumaila</p>
+
+            <h6>Description:</h6>
+            <!-- <input type="text" id="taskDescription">  -->
+            <!-- placeholder="Describe/summarize your task"> -->
+            <p>Do this stuff now homeboy! </p>
+            <br>
+            <h6>Due Date:</h6>
+            <p>37th August 2021</p>
+            <br>
+
+
+              <label class="form-label" for="status">Status: </label>
+              <br>
+                <select id="status" name="status">
+
+                <label class="form-label" for="status"></label>
+                <option value="To Do">To Do</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Review">Review</option>
+                <option value="Done">Done</option>
+             </select>
+
+
+            <br>
+            <br>
+            
+            <button input type="submit" class="btn btn-primary">Save Changes
+            </button>          
+            <button input type="submit" class="btn btn-primary">Delete Task
+            </button>
+          
+         
+        </div>
+      </div>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
