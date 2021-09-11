@@ -15,7 +15,7 @@
   <body>
     <h1>ShumArmJen tasks</h1>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -26,10 +26,10 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Add Task</a>
+            <a class="nav-link" href="#task-form">Add Task</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Task List</a>
+            <a class="nav-link" href="#task-list">Task List</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Help</a>
@@ -41,11 +41,11 @@
 
     
     <div class="container">
-      <div class="row">
+      <div class="row" id="task-form">
 <!-- Task Form -->
-        <div class="col-md-6 col-xs-12" id="task-box">
+        <div class="col-12 border border-secondary pt-3">
 
-          <div class="border border-secondary p-3">
+          <div class="">
           <form action="example.html" method="post">
       
             <div class="mb-3">
@@ -98,8 +98,10 @@
 
        
         </div>
+      </div>
+      <div class="row" id="task-list">
 <!-- Task Card -->
-        <div class="col-md-6 col-xs-12"  id="task-box">
+        <div class="col-12"  >
           <div id="myDIV" class="row header">
             <h4>Tasks already entered</h4>
           </div>
@@ -258,6 +260,7 @@
           </li>
         </ul>
       </div>
+
       </div>
     </div>
 

@@ -14,3 +14,12 @@
 .task-status-done {
   background-color: rgb(199, 245, 199);
 }
+#task-form {
+  display: none;
+}
+#task-form:target {
+  display: block;
+}
+#task-form:target + #task-list {
+  display: none;
+}
