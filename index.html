@@ -48,31 +48,35 @@
           <div class="border border-secondary p-3">
           <form action="example.html" method="post">
       
+            <div class="mb-3">
+              <label class="form-label" for="taskName">Task:</label>
+              <input class="form-control" type="text" id="taskName" placeholder="Input the task name...">
+            </div>
 
-            <label class="form-label" for="taskName">Task:</label>
-            <input class="form-control" type="text" id="taskName" placeholder="Input the task name...">
-            <br>
 
+            <div class="mb-3">
             <label class="form-label" for="taskOwner">Assigned to:</label>
             <input class="form-control" type="text" id="taskOwner" placeholder="Who will do this task...">
-            <br>
+            </div>
 
+            <div class="mb-3">            
             <label class="form-label" for="taskDescription">Description:</label>
             <!-- <input type="text" id="taskDescription">  -->
             <!-- placeholder="Describe/summarize your task"> -->
             <textarea  class="form-control" id="taskDescription"> Describe/summarize your task
 
             </textarea>
-            <br>
+            </div>
+
+            <div class="mb-3">
             <label class="form-label" for="dueDate">Due Date:</label>
             <input class="form-control" type="date" id="dueDate">
-            <br>
-            <br>
+             </div>
 
-
+            <div class="mb-3">
               <label class="form-label" for="status">Status: </label>
-              <br>
-                <select id="status" name="status">
+              
+              <select class="form-control" id="status" name="status">
 
                 <label class="form-label" for="status"></label>
                 <option value="To Do">To Do</option>
@@ -80,8 +84,10 @@
                 <option value="Review">Review</option>
                 <option value="Done">Done</option>
              </select>
-             <br>
-             <br>
+             </div>
+
+
+
              <button input type="submit" class="btn btn-primary">Submit
             </button>
           
