@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="CSS/styles.css" >
 
     <title>ShumArmJen tasks</title>
-    
+
   </head>
   <body>
     <h1>ShumArmJen tasks</h1>
@@ -39,8 +39,6 @@
       </div>
     </nav>
 
-
-    
     <div class="container">
       <div class="row" id="task-form">
 <!-- Task Form -->
@@ -49,19 +47,23 @@
             <h4>Add Task</h4>
           </div>
 
-
           <div class="" >
           <form action="" method="" id="newTaskForm">
       
             <div class="mb-3">
               <label class="form-label" for="taskName">Task:</label>
               <input class="form-control" type="text" id="taskName" placeholder="Input the task name...">
+              <div class="invalid-feedback">
+                Please provide a valid task longer than 5 characters!
+              </div>
             </div>
-
 
             <div class="mb-3">
             <label class="form-label" for="taskOwner">Assigned to:</label>
             <input class="form-control" type="text" id="taskOwner" placeholder="Who will do this task...">
+              <div class="invalid-feedback">
+              Please provide a valid task OWNER longer than 5 characters!
+              </div>
             </div>
 
             <div class="mb-3">            
@@ -69,13 +71,18 @@
             <!-- <input type="text" id="taskDescription">  -->
             <!-- placeholder="Describe/summarize your task"> -->
             <textarea  class="form-control" id="taskDescription" placeholder="Describe/summarize your task">
-
             </textarea>
+            <div class="invalid-feedback">
+              Please add a description
+            </div>
             </div>
 
             <div class="mb-3">
             <label class="form-label" for="dueDate">Due Date:</label>
             <input class="form-control" type="date" id="dueDate">
+            <div class="invalid-feedback">
+              Please add a due date
+            </div>
              </div>
 
             <div class="mb-3">
@@ -89,9 +96,10 @@
                 <option value="Review">Review</option>
                 <option value="Done">Done</option>
              </select>
+             <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
              </div>
-
-
 
              <button input type="submit" class="btn btn-primary">Submit
             </button>
@@ -281,6 +289,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   
    
-  <script src="./js/index.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

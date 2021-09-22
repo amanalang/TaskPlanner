@@ -23,3 +23,9 @@
 #task-form:target + #task-list {
   display: none;
 }
+.valid {
+  background-color: green;
+}
+.invalid { 
+  background-color: red;
+}
