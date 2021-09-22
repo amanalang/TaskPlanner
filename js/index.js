@@ -17,6 +17,8 @@ function validateTask() {
   console.log("Task Due Date :" + dueDate.value);
   console.log("Task Status:" + status.value);
   //step 2: Validation logic
+  // Form validation for Task Description Field min length 5
+
   if (taskName.value.trim().length > 5) {
     console.log("task name is valid");
   } else {
@@ -47,4 +49,3 @@ function validateTask() {
     console.log("status is invalid");
   }
 }
-// Form validation for Task Description Field min length 5
