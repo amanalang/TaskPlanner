@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="CSS/styles.css" >
 
     <title>ShumArmJen tasks</title>
+    <script src="./js/index.js"></script>
   </head>
   <body>
     <h1>ShumArmJen tasks</h1>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -26,10 +27,10 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Add Task</a>
+            <a class="nav-link" href="#task-form">Add Task</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Task List</a>
+            <a class="nav-link" href="#task-list">Task List</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Help</a>
@@ -41,38 +42,46 @@
 
     
     <div class="container">
-      <div class="row">
+      <div class="row" id="task-form">
 <!-- Task Form -->
-        <div class="col-md-6 col-xs-12" id="task-box">
+        <div class="col-12 border border-secondary pt-3">
+           <div class="row header">
+            <h4>Add Task</h4>
+          </div>
 
-          <div class="border border-secondary p-3">
-          <form action="example.html" method="post">
+
+          <div class="">
+          <form action="" method="">
       
+            <div class="mb-3">
+              <label class="form-label" for="taskName">Task:</label>
+              <input class="form-control" type="text" id="taskName" placeholder="Input the task name...">
+            </div>
 
-            <label class="form-label" for="taskName">Task:</label>
-            <input class="form-control" type="text" id="taskName" placeholder="Input the task name...">
-            <br>
 
+            <div class="mb-3">
             <label class="form-label" for="taskOwner">Assigned to:</label>
             <input class="form-control" type="text" id="taskOwner" placeholder="Who will do this task...">
-            <br>
+            </div>
 
+            <div class="mb-3">            
             <label class="form-label" for="taskDescription">Description:</label>
             <!-- <input type="text" id="taskDescription">  -->
             <!-- placeholder="Describe/summarize your task"> -->
             <textarea  class="form-control" id="taskDescription"> Describe/summarize your task
 
             </textarea>
-            <br>
-            <label class="form-label" for="taskName">Due Date:</label>
+            </div>
+
+            <div class="mb-3">
+            <label class="form-label" for="dueDate">Due Date:</label>
             <input class="form-control" type="date" id="dueDate">
-            <br>
-            <br>
+             </div>
 
-
+            <div class="mb-3">
               <label class="form-label" for="status">Status: </label>
-              <br>
-                <select id="status" name="status">
+              
+              <select class="form-control" id="status" name="status">
 
                 <label class="form-label" for="status"></label>
                 <option value="To Do">To Do</option>
@@ -80,8 +89,10 @@
                 <option value="Review">Review</option>
                 <option value="Done">Done</option>
              </select>
-             <br>
-             <br>
+             </div>
+
+
+
              <button input type="submit" class="btn btn-primary">Submit
             </button>
           
@@ -92,14 +103,16 @@
 
        
         </div>
+      </div>
+      <div class="row" id="task-list">
 <!-- Task Card -->
-        <div class="col-md-6 col-xs-12"  id="task-box">
-          <div id="myDIV" class="row header">
+        <div class="col-12"  >
+          <div class="row header">
             <h4>Tasks already entered</h4>
           </div>
 
           <ul class="list-unstyled">
-          <li class="row mb-1 mt-1 pb-2 border border-secondary">
+          <li class="row mb-1 mt-1 pb-2 border border-secondary task-status-todo">
             <div class="col col-xs-12">
 
               <div class="col"><strong>Go to swimming class!</strong></div>
@@ -117,7 +130,7 @@
             </div>          
             <div class="row mb-1">
                <div class="col col-md-3">Status</div>
-               <div class="col col-md-9">In progress</div>
+               <div class="col col-md-9">To Do</div>
             </div>          
         
 
@@ -130,7 +143,7 @@
           </div>
           </li>
 
-          <li class="row mb-1 mt-1 pb-2 border border-secondary">
+          <li class="row mb-1 mt-1 pb-2 border border-secondary task-status-inprogress">
             <div class="col col-xs-12">
               <div class="col"><strong>Mow the lawn!</strong></div>
 
@@ -148,7 +161,7 @@
             </div>          
             <div class="row mb-1">
                <div class="col col-md-3">Status</div>
-               <div class="col col-md-9">In progress</div>
+               <div class="col col-md-9">In Progress</div>
             </div>          
         
 
@@ -161,7 +174,7 @@
           </div>
           </li>
 
-          <li class="row mb-1 mt-1 pb-2 border border-secondary">
+          <li class="row mb-1 mt-1 pb-2 border border-secondary task-status-inprogress">
             <div class="col col-xs-12">
 
               <div class="col"><strong>Go to the gym!</strong></div>
@@ -179,7 +192,7 @@
             </div>          
             <div class="row mb-1">
                <div class="col col-md-3">Status</div>
-               <div class="col col-md-9">In progress</div>
+               <div class="col col-md-9">In Progress</div>
             </div>          
 
             <div class=" mt-3">         
@@ -191,7 +204,7 @@
           </div>
           </li>
 
-          <li class="row mb-1 mt-1 pb-2 border border-secondary">
+          <li class="row mb-1 mt-1 pb-2 border border-secondary task-status-review">
             <div class="col col-xs-12">
               <div class="col"><strong>Renew drivers licence!</strong></div>
             <div class="row mb-1">
@@ -208,7 +221,7 @@
             </div>          
             <div class="row mb-1">
                <div class="col col-md-3">Status</div>
-               <div class="col col-md-9">In progress</div>
+               <div class="col col-md-9">Review</div>
             </div>          
 
             <div class=" mt-3">         
@@ -220,7 +233,7 @@
           </div>
           </li>
 
-          <li class="row mb-1 mt-1 pb-2 border border-secondary">
+          <li class="row mb-1 mt-1 pb-2 border border-secondary task-status-todo">
             <div class="col col-xs-12">
               <div class="col"><strong>Get a haircut!</strong></div>
             <div class="row mb-1">
@@ -238,7 +251,7 @@
             </div>          
             <div class="row mb-1">
                <div class="col col-md-3">Status</div>
-               <div class="col col-md-9">In progress</div>
+               <div class="col col-md-9">To Do</div>
             </div>          
         
 
@@ -252,6 +265,12 @@
           </li>
         </ul>
       </div>
+
+      </div>
+      <div class="row">
+        <div class="col text-right">
+          <a href="#" class="back">Back to Top</a>
+        </div>
       </div>
     </div>
 
@@ -260,5 +279,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  
+   
+  
   </body>
 </html>
