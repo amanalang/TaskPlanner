@@ -13,11 +13,7 @@ taskForm.addEventListener("submit", validateTask);
 
 // Form validation for Task Name Field min length 5
 function validateTask() {
-<<<<<<< HEAD
-  .preventDefault() 
-=======
   let error = 0;
->>>>>>> 4af834008567b30152a8e89a25947d00142b4539
   console.log("Task:  " + taskName.value);
   console.log("Task Assigned To :" + taskOwner.value);
   console.log("Task Description :" + taskDescription.value);
