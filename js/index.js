@@ -10,6 +10,7 @@ let dueDate = document.querySelector("#dueDate");
 let status = document.querySelector("#status");
 
 taskForm.addEventListener("submit", validateTask);
+// in the event listener for the submit event on the New Task form, find the call to the TaskManager's addTask.
 
 // Form validation for Task Name Field min length 5
 function validateTask() {
@@ -84,6 +85,12 @@ function validateTask() {
 
   if (error === 0) {
     taskManager.addTask(taskName.value, taskDescription.value, taskOwner.value, dueDate.value, status.value);
-    document.getElementById("newTaskForm").reset();
+    taskForm.reset();
+    const taskShumArmJen = document.querySelector("#shumarmjen"); 
+    taskShumArmJen.innerHTML = taskManager.render();  
+
   }
 }
+
+// const taskHtml = createTaskHtml('jensen', 'sweeping', 'jensen', 22/09/2022, 'review');
+// console.log(taskHtml);
