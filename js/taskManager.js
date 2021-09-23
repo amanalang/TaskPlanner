@@ -19,4 +19,7 @@ class TaskManager {
     this.tasks.push(task1);
     console.log("tasks", this.tasks);
   }
+  myFunction() {
+    document.getElementById("myForm").reset();
+  }
 }
