@@ -83,6 +83,6 @@ function validateTask() {
   // reset to 0.
 
   if (error === 0) {
-    taskManager.addTask(taskName, taskDescription, taskOwner, dueDate, status);
+    taskManager.addTask(taskName.value, taskDescription.value, taskOwner.value, dueDate.value, status.value);
   }
 }
