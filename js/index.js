@@ -84,5 +84,6 @@ function validateTask() {
 
   if (error === 0) {
     taskManager.addTask(taskName.value, taskDescription.value, taskOwner.value, dueDate.value, status.value);
+    document.getElementById("newTaskForm").reset();
   }
 }
