@@ -84,13 +84,27 @@ function validateTask() {
   // reset to 0.
 
   if (error === 0) {
-    taskManager.addTask(taskName.value, taskDescription.value, taskOwner.value, dueDate.value, status.value);
+    taskManager.addTask(
+      taskName.value,
+      taskDescription.value,
+      taskOwner.value,
+      dueDate.value,
+      status.value
+    );
     taskForm.reset();
-    const taskShumArmJen = document.querySelector("#shumarmjen"); 
-    taskShumArmJen.innerHTML = taskManager.render();  
-
+    const taskList = document.querySelector("#taskList");
+    taskList.innerHTML = taskManager.render();
   }
 }
+taskManager.addTask(
+  "Complete your sprint2",
+  "work hard and achieve your goals",
+  "Shumailakashif",
+  28 / 09 / 2021,
+  "In-progress"
+);
+const taskList = document.querySelector("#taskList");
+taskList.innerHTML = taskManager.render();
 
 // const taskHtml = createTaskHtml('jensen', 'sweeping', 'jensen', 22/09/2022, 'review');
 // console.log(taskHtml);

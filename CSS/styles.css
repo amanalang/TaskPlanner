@@ -1,3 +1,6 @@
+.font-birthstone {
+  font-family: "Birthstone", cursive;
+}
 .task-box {
   background-color: #333;
   overflow: hidden;
@@ -22,10 +25,4 @@
 }
 #task-form:target + #task-list {
   display: none;
-}
-.valid {
-  background-color: green;
-}
-.invalid { 
-  background-color: red;
 }

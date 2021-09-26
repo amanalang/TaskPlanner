@@ -9,14 +9,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- Our own CSS file -->
     <link rel="stylesheet" href="CSS/styles.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
 
-    <title>ShumArmJen tasks</title>
+
+    <title>Final Project To Do List</title>
 
   </head>
   <body>
-    <h1>ShumArmJen tasks</h1>
+    <h1 class="font-birthstone ml-4">To Do App</h1>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+    <nav class="navbar navbar-expand-lg navbar-light mb-3 bg-info bg-gradient">
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -44,7 +49,7 @@
 <!-- Task Form -->
         <div class="col-12 border border-secondary pt-3">
            <div class="row header">
-            <h4>Add Task</h4>
+            <h2 class="font-birthstone ml-3">Add Task</h2>
           </div>
 
           <div class="" >
@@ -100,7 +105,7 @@
             </div>
              </div>
 
-             <button input type="submit" class="btn btn-primary">Submit
+             <button input type="submit" class="btn bg-info">Submit
             </button>
           
             </form>
@@ -113,12 +118,12 @@
       </div>
       <div class="row" id="task-list">
 <!-- Task Card -->
-        <div class="col-12"  >
+        <div class="col-xs-12 col-md-4"  >
           <div class="row header">
             <h4>Tasks already entered</h4>
           </div>
 
-          <ul class="list-unstyled" id="shumarmjen">
+          <ul class="list-unstyled" id="taskList">
           <li class="row mb-1 mt-1 pb-2 border border-secondary task-status-todo">
             <div class="col col-xs-12">
 
@@ -142,9 +147,9 @@
         
 
             <div class=" mt-3">         
-              <button input type="submit" class="btn btn-primary">Edit
+              <button input type="submit" class="btn btn-primary"><i class="bi bi-pen"></i>
               </button>          
-              <button input type="submit" class="btn btn-danger">Delete Task
+              <button input type="submit" class="btn btn-danger"><i class="bi bi-trash"></i>
               </button>          
             </div>
           </div>
