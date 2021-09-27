@@ -27,6 +27,7 @@ function createTaskHtml(name, desc, owner, dueDate, status) {
               </button>          
               <button input type="submit" class="btn btn-danger"><i class="bi bi-trash"></i>
               </button>          
+              <button input type="submit" class="btn btn-success"><i class="bi bi-check-square-fill"></i></button>          
             </div>
           </div>
           </li>`;

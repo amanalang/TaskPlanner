@@ -108,3 +108,8 @@ taskList.innerHTML = taskManager.render();
 
 // const taskHtml = createTaskHtml('jensen', 'sweeping', 'jensen', 22/09/2022, 'review');
 // console.log(taskHtml);
+// In js/index.js, at the bottom of the file, use querySelector to select the Task List and store it in a variable
+
+//adding an Event Listner
+const tasklist = document.querySelector(taskList);
+taskList.addEventListener("click", function (event) {});
