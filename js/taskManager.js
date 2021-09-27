@@ -1,7 +1,7 @@
 function createTaskHtml(name, desc, owner, dueDate, status, id) {
   let cssClass = status.toLowerCase().replace(" ", "");
-  const html = `<li class= "row mb-1 mt-1 pb-2 border border-secondary task-status-${cssClass}" data-task-id="${id}">
-            <div class="col col-xs-12">
+  const html = `<li class= "col col-12 col-md-4 mb-1 mt-1" data-task-id="${id}">
+            <div class="col border border-secondary pb-2 task-status-${cssClass}">
 
               <div class="col"><strong>${name}</strong></div>
             <div class="row mb-1">
@@ -23,11 +23,11 @@ function createTaskHtml(name, desc, owner, dueDate, status, id) {
         
 
             <div class=" mt-3 text-right">         
-              <button input type="submit" class="btn btn-primary"><i class="bi bi-pen"></i>
+              <button input type="submit" class="btn btn-sm btn-primary"><i class="bi bi-pen"></i>
               </button>          
-              <button input type="submit" class="btn btn-danger"><i class="bi bi-trash"></i>
+              <button input type="submit" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i>
               </button>          
-              <button input type="submit" class="btn btn-success btn-done"><i class="bi bi-check-square-fill"></i></button>          
+              <button input type="submit" class="btn btn-sm btn-success btn-done"><i class="bi bi-check-square-fill"></i></button>          
             </div>
           </div>
           </li>`;
