@@ -92,7 +92,7 @@ function validateTask() {
       status.value
     );
     taskForm.reset();
-    const taskList = document.querySelector("#taskList");
+    const taskList = document.querySelector("#task-list");
     taskList.innerHTML = taskManager.render();
   }
 }
@@ -100,10 +100,17 @@ taskManager.addTask(
   "Complete your sprint2",
   "work hard and achieve your goals",
   "Shumailakashif",
-  28 / 09 / 2021,
-  "In-progress"
+  new Date("2021-10-26"),
+  "In Progress"
 );
-const taskList = document.querySelector("#taskList");
+taskManager.addTask(
+  "Practice code academy",
+  "work hard and achieve your goals",
+  "Shumailakashif",
+  new Date("2021-09-26"),
+  "Done"
+);
+const taskList = document.querySelector("#task-list");
 taskList.innerHTML = taskManager.render();
 
 // const taskHtml = createTaskHtml('jensen', 'sweeping', 'jensen', 22/09/2022, 'review');
@@ -111,5 +118,10 @@ taskList.innerHTML = taskManager.render();
 // In js/index.js, at the bottom of the file, use querySelector to select the Task List and store it in a variable
 
 //adding an Event Listner
-const tasklist = document.querySelector(taskList);
-taskList.addEventListener("click", function (event) {});
+taskList.addEventListener("click", function (event) {
+  // console.log(event);
+  if (event.target.classList.contains("btn-done")) {
+    const li = event.target.closest("li");
+    console.log(li);
+  }
+});

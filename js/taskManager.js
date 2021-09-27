@@ -1,6 +1,6 @@
-function createTaskHtml(name, desc, owner, dueDate, status) {
+function createTaskHtml(name, desc, owner, dueDate, status, id) {
   let cssClass = status.toLowerCase().replace(" ", "");
-  const html = `<li class="row mb-1 mt-1 pb-2 border border-secondary task-status-${cssClass}">
+  const html = `<li class= "row mb-1 mt-1 pb-2 border border-secondary task-status-${cssClass}" data-task-id="${id}">
             <div class="col col-xs-12">
 
               <div class="col"><strong>${name}</strong></div>
@@ -27,7 +27,7 @@ function createTaskHtml(name, desc, owner, dueDate, status) {
               </button>          
               <button input type="submit" class="btn btn-danger"><i class="bi bi-trash"></i>
               </button>          
-              <button input type="submit" class="btn btn-success"><i class="bi bi-check-square-fill"></i></button>          
+              <button input type="submit" class="btn btn-success btn-done"><i class="bi bi-check-square-fill"></i></button>          
             </div>
           </div>
           </li>`;
@@ -51,9 +51,28 @@ class TaskManager {
       dueDate: dueDate,
       status,
     };
+
     // push a new task in to the .this array
     this.tasks.push(task1);
     console.log("tasks", this.tasks);
+  }
+
+  //create a new method
+  getTaskById(tasksId) {
+    let foundTask;
+    // Loop over the this.tasks array, for each task in the loop:
+    for (i = 0; i < this.tasks.length; i++) {
+      // Store the current task in a variable called task
+
+      let task = this.tasks[i];
+      // Compare task.id to the passed in taskId, if its a match, store the task to the variable foundTask
+      if (task.id === tasksId) {
+        foundTask = task;
+      }
+      //return the foundTask variable from the method.
+      return foundTask();
+    }
+    taskManager.getTaskById(0);
   }
   render() {
     const taskHtmlList = [];
@@ -67,7 +86,8 @@ class TaskManager {
         task1.description,
         task1.assignedTo,
         formattedDate,
-        task1.status
+        task1.status,
+        task1.id
       );
       //push the taskHtml into the tasksHtmlList array.
       taskHtmlList.push(taskHtml);
