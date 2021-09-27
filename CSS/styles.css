@@ -21,13 +21,13 @@ button > .bi {
   background-color: inherit;
 }
 .task-status-inprogress {
-  background-color: rgb(230, 196, 196);
+  background-color: rgb(238, 238, 190);
 }
 .task-status-review {
-  background-color: rgb(200, 223, 238);
+  background-color: rgb(204, 218, 228);
 }
 .task-status-done {
-  background-color: rgb(199, 245, 199);
+  background-color: rgb(209, 245, 209);
 }
 #task-form {
   display: none;

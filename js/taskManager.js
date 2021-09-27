@@ -3,22 +3,22 @@ function createTaskHtml(name, desc, owner, dueDate, status, id) {
   const html = `<li class= "col col-12 col-md-4 mb-1 mt-1" data-task-id="${id}">
             <div class="col border border-secondary pb-2 task-status-${cssClass}">
 
-              <div class="col"><strong>${name}</strong></div>
-            <div class="row mb-1">
-              <div class="col col-md-3">Assign to:</div>
-              <div class="col col-md-9">${owner}</div>
+              <div class=""><strong>${name}</strong></div>
+            <div class="mb-1">
+              <div class="">Assign to:</div>
+              <div class="">${owner}</div>
             </div>          
-            <div class="row mb-1">
-              <div class="col col-md-3">Description:</div>
-              <div class="col col-md-9">${desc}</div>
+            <div class="">
+              <div class="">Description:</div>
+              <div class="">${desc}</div>
             </div>
-            <div class="row mb-1">
-               <div class="col col-md-3">Due Date:</div>
-               <div class="col col-md-9">${dueDate}</div>
+            <div class="">
+               <div class="">Due Date:</div>
+               <div class="">${dueDate}</div>
             </div>          
-            <div class="row mb-1">
-               <div class="col col-md-3">Status</div>
-               <div class="col col-md-9">${status}</div>
+            <div class="">
+               <div class="">Status:</div>
+               <div class="">${status}</div>
             </div>          
         
 
@@ -27,7 +27,7 @@ function createTaskHtml(name, desc, owner, dueDate, status, id) {
               </button>          
               <button input type="submit" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i>
               </button>          
-              <button input type="submit" class="btn btn-sm btn-success btn-done"><i class="bi bi-check-square-fill"></i></button>          
+              <button input type="submit" class="btn btn-sm btn-success btn-done"><i class="bi bi-calendar-check"></i></button>          
             </div>
           </div>
           </li>`;
