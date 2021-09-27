@@ -110,6 +110,34 @@ taskManager.addTask(
   new Date("2021-09-26"),
   "Done"
 );
+taskManager.addTask(
+  "Complete your sprint2",
+  "work hard and achieve your goals",
+  "Shumailakashif",
+  new Date("2021-10-26"),
+  "IN progress"
+);
+// taskManager.addTask(
+//   "Practice code academy",
+//   "work hard and achieve your goals",
+//   "Shumailakashif",
+//   new Date("2021-09-26"),
+//   "Review"
+// );
+// taskManager.addTask(
+//   "Complete your sprint2",
+//   "work hard and achieve your goals",
+//   "Shumailakashif",
+//   new Date("2021-10-26"),
+//   "In Progress"
+// );
+// taskManager.addTask(
+//   "Practice code academy",
+//   "work hard and achieve your goals",
+//   "Shumailakashif",
+//   new Date("2021-09-26"),
+//   "Done"
+// );
 const taskList = document.querySelector("#task-list");
 taskList.innerHTML = taskManager.render();
 
