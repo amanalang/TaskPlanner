@@ -1,6 +1,10 @@
 .font-birthstone {
   font-family: "Birthstone", cursive;
 }
+button > .bi {
+  pointer-events: none;
+}
+
 .task-box {
   background-color: #333;
   overflow: hidden;
