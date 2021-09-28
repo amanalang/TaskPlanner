@@ -61,7 +61,7 @@ class TaskManager {
   getTaskById(tasksId) {
     let foundTask;
     // Loop over the this.tasks array, for each task in the loop:
-    for (i = 0; i < this.tasks.length; i++) {
+    for (let i = 0; i < this.tasks.length; i++) {
       // Store the current task in a variable called task
 
       let task = this.tasks[i];
@@ -69,10 +69,9 @@ class TaskManager {
       if (task.id === tasksId) {
         foundTask = task;
       }
-      //return the foundTask variable from the method.
-      return foundTask();
     }
-    taskManager.getTaskById(0);
+    //return the foundTask variable from the method.
+    return foundTask;
   }
   render() {
     const taskHtmlList = [];
