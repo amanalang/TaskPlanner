@@ -27,7 +27,9 @@ function createTaskHtml(name, desc, owner, dueDate, status, id) {
               </button>          
               <button input type="submit" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i>
               </button>          
-              <button input type="submit" class="btn btn-sm btn-success btn-done"><i class="bi bi-calendar-check"></i></button>          
+              <button input type="submit" class="${
+                status === "Done" ? "invisible" : ""
+              } btn btn-sm btn-success btn-done"><i class="bi bi-calendar-check"></i></button>
             </div>
           </div>
           </li>`;
@@ -92,8 +94,11 @@ class TaskManager {
       taskHtmlList.push(taskHtml);
     }
     // After looping through each task, create a new tasksHtml variable (think about your scoping), and set it to a string of HTML of all the tasks by joining the tasksHtmlList array together, separating each task's html with a newline.
+    // Select the tasks list element and set its innerHTML to the tasksHtml.
+
     const newTaskHtml = taskHtmlList.join("\n");
     return newTaskHtml;
-    // Select the tasks list element and set its innerHTML to the tasksHtml.
   }
 }
+//Stretch Goal-Hiding the "Done" Button For Completed Tasks
+//Stretch Goal - Change the Styling of the Task Status.
