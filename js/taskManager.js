@@ -99,6 +99,35 @@ class TaskManager {
     const newTaskHtml = taskHtmlList.join("\n");
     return newTaskHtml;
   }
+  //in the TaskManager class, create a save method. This method doesn't require any parameters.
+  save() {
+    // Create a JSON string of the tasks
+    const taskJson = JSON.stringify(this.tasks);
+    // Store the JSON string in localStorage under the key tasks
+    localStorage.setItem("tasks", taskJson);
+    // Convert the this.currentId to a string and store it in a new variable
+    const currentId = String(this.currentId); 
+    // Store the currentId variable in localStorage under the key currentId
+    localStorage.setItem("currentId", currentId); 
+  }
+//   We'll also be converting the currentId number we converted as a string, back to a number. Add a new method called load. This method doesn't require any parameters
+  load() {
+    //check if any tasks are saved in localStorage with localStorage.getItem()
+    if (localStorage.getItem("tasks")) {
+      //get the JSON string of tasks stored in localStorage with localStorage.getItem(), making sure to pass the key we used to save the tasks, tasks. Store this string into a new variable,
+      const tasksJson = localStorage.getItem("tasks");
+      // Convert the tasksJson string to an array using JSON.parse() and store it in this.tasks
+      this.tasks = JSON.parse(tasksJson);
+    }
+    //check if the currentId is saved in localStorage with localStorage.getItem()
+    if  (localStorage.getItem("currentId")) {
+      //get the currentId in localStorage using localStorage.getItem() and store it in a new variable, currentId
+      const currentId = localStorage.getItem("currentId");
+      //Convert the currentId to a number before storing it to the TaskManager's this.currentId
+      this.currentId = Number(currentId);
+    }
+
+  }
 }
 //Stretch Goal-Hiding the "Done" Button For Completed Tasks
 //Stretch Goal - Change the Styling of the Task Status.

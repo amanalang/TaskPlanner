@@ -1,7 +1,11 @@
 // initilising taskManager
 const taskManager = new TaskManager();
+//Task 9 step2.8 load the tasks with taskManager.load() and render them with taskManager.render()
+taskManager.load();
+taskManager.render();
 // step 1: Implement JavaScript function to validate your form fields
 const taskForm = document.getElementById("newTaskForm");
+
 
 let taskName = document.querySelector("#taskName");
 let taskOwner = document.querySelector("#taskOwner");
@@ -93,6 +97,7 @@ function validateTask() {
     );
     taskForm.reset();
     const taskList = document.querySelector("#task-list");
+    taskManager.save();
     taskList.innerHTML = taskManager.render();
   }
 }
@@ -156,6 +161,9 @@ taskList.addEventListener("click", function (event) {
     task.status = "Done";
     console.log(task.status);
     taskList.innerHTML = taskManager.render();
+    //after both adding a new task and updating a task's status to done, call taskManager.save() to save the tasks to localSorage
+    taskManager.save()
   }
   //create a taskId variable, setting the value to the taskId data-attribute
+
 });
