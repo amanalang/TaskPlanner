@@ -103,23 +103,23 @@ function validateTask() {
 
 if (loadedFromLocalStorage === 0) {
   taskManager.addTask(
-    "Complete your sprint2",
+    "Complete your sprint3",
     "work hard and achieve your goals",
-    "Shumailakashif",
+    "Shumaila Kashif",
     new Date("2021-10-26"),
     "Review"
   );
   taskManager.addTask(
     "Practice code academy",
     "work hard and achieve your goals",
-    "Shumailakashif",
+    "Jensen",
     new Date("2021-09-26"),
     "Done"
   );
   taskManager.addTask(
-    "Complete your sprint2",
+    "Complete your Final Project",
     "work hard and achieve your goals",
-    "Shumailakashif",
+    "Arman",
     new Date("2021-10-26"),
     "IN progress"
   );
@@ -177,8 +177,10 @@ taskList.addEventListener("click", function (event) {
     const taskId = Number(li.getAttribute("data-task-id"));
     //Delete the task, passing the taskId to taskManager.deleteTask()
     taskManager.deleteTask(taskId);
+
     //Save the tasks to localStorage using taskManager.save()
     taskList.innerHTML = taskManager.render();
+    taskManager.save();
 
     //Render the tasks using taskManager.render()
     //taskList.innerHTML = taskManager.save();
