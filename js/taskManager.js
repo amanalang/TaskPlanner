@@ -76,7 +76,7 @@ class TaskManager {
     //return the foundTask variable from the method.
     return foundTask;
   }
-      //task 10 step 2 Create the deleteTask Method on TaskManager
+  //task 10 step 2 Create the deleteTask Method on TaskManager
   deleteTask(taskId) {
     //create a new variable newTasks and set it to an empty array.
     const newTasks = [];
@@ -88,11 +88,11 @@ class TaskManager {
         //If the task.id is not equal to the taskId, push the task into the newTasks array.
         newTasks.push(task);
       }
-  }
+    }
 
-  //Set this.tasks to newTasks
-  this.tasks = newTasks;
-}
+    //Set this.tasks to newTasks
+    this.tasks = newTasks;
+  }
 
   render() {
     const taskHtmlList = [];
@@ -125,11 +125,11 @@ class TaskManager {
     // Store the JSON string in localStorage under the key tasks
     localStorage.setItem("tasks", taskJson);
     // Convert the this.currentId to a string and store it in a new variable
-    const currentId = String(this.currentId); 
+    const currentId = String(this.currentId);
     // Store the currentId variable in localStorage under the key currentId
-    localStorage.setItem("currentId", currentId); 
+    localStorage.setItem("currentId", currentId);
   }
-//   We'll also be converting the currentId number we converted as a string, back to a number. Add a new method called load. This method doesn't require any parameters
+  //   We'll also be converting the currentId number we converted as a string, back to a number. Add a new method called load. This method doesn't require any parameters
   load() {
     //check if any tasks are saved in localStorage with localStorage.getItem()
     if (localStorage.getItem("tasks")) {
@@ -139,13 +139,14 @@ class TaskManager {
       this.tasks = JSON.parse(tasksJson);
     }
     //check if the currentId is saved in localStorage with localStorage.getItem()
-    if  (localStorage.getItem("currentId")) {
+    if (localStorage.getItem("currentId")) {
       //get the currentId in localStorage using localStorage.getItem() and store it in a new variable, currentId
       const currentId = localStorage.getItem("currentId");
       //Convert the currentId to a number before storing it to the TaskManager's this.currentId
       this.currentId = Number(currentId);
     }
 
+    return this.tasks.length;
   }
 }
 //Stretch Goal-Hiding the "Done" Button For Completed Tasks

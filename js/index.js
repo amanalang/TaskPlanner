@@ -1,11 +1,10 @@
 // initilising taskManager
 const taskManager = new TaskManager();
 //Task 9 step2.8 load the tasks with taskManager.load() and render them with taskManager.render()
-taskManager.load();
+const loadedFromLocalStorage = taskManager.load();
 taskManager.render();
 // step 1: Implement JavaScript function to validate your form fields
 const taskForm = document.getElementById("newTaskForm");
-
 
 let taskName = document.querySelector("#taskName");
 let taskOwner = document.querySelector("#taskOwner");
@@ -101,48 +100,53 @@ function validateTask() {
     taskList.innerHTML = taskManager.render();
   }
 }
-taskManager.addTask(
-  "Complete your sprint2",
-  "work hard and achieve your goals",
-  "Shumailakashif",
-  new Date("2021-10-26"),
-  "Review"
-);
-taskManager.addTask(
-  "Practice code academy",
-  "work hard and achieve your goals",
-  "Shumailakashif",
-  new Date("2021-09-26"),
-  "Done"
-);
-taskManager.addTask(
-  "Complete your sprint2",
-  "work hard and achieve your goals",
-  "Shumailakashif",
-  new Date("2021-10-26"),
-  "IN progress"
-);
-// taskManager.addTask(
-//   "Practice code academy",
-//   "work hard and achieve your goals",
-//   "Shumailakashif",
-//   new Date("2021-09-26"),
-//   "Review"
-// );
-// taskManager.addTask(
-//   "Complete your sprint2",
-//   "work hard and achieve your goals",
-//   "Shumailakashif",
-//   new Date("2021-10-26"),
-//   "In Progress"
-// );
-// taskManager.addTask(
-//   "Practice code academy",
-//   "work hard and achieve your goals",
-//   "Shumailakashif",
-//   new Date("2021-09-26"),
-//   "Done"
-// );
+
+if (loadedFromLocalStorage === 0) {
+  taskManager.addTask(
+    "Complete your sprint2",
+    "work hard and achieve your goals",
+    "Shumailakashif",
+    new Date("2021-10-26"),
+    "Review"
+  );
+  taskManager.addTask(
+    "Practice code academy",
+    "work hard and achieve your goals",
+    "Shumailakashif",
+    new Date("2021-09-26"),
+    "Done"
+  );
+  taskManager.addTask(
+    "Complete your sprint2",
+    "work hard and achieve your goals",
+    "Shumailakashif",
+    new Date("2021-10-26"),
+    "IN progress"
+  );
+  // taskManager.addTask(
+  //   "Practice code academy",
+  //   "work hard and achieve your goals",
+  //   "Shumailakashif",
+  //   new Date("2021-09-26"),
+  //   "Review"
+  // );
+  // taskManager.addTask(
+  //   "Complete your sprint2",
+  //   "work hard and achieve your goals",
+  //   "Shumailakashif",
+  //   new Date("2021-10-26"),
+  //   "In Progress"
+  // );
+  // taskManager.addTask(
+  //   "Practice code academy",
+  //   "work hard and achieve your goals",
+  //   "Shumailakashif",
+  //   new Date("2021-09-26"),
+  //   "Done"
+  // );
+  taskManager.save();
+}
+
 const taskList = document.querySelector("#task-list");
 taskList.innerHTML = taskManager.render();
 
@@ -165,7 +169,7 @@ taskList.addEventListener("click", function (event) {
     taskManager.save();
   }
 
-//Task 10 step 3 Setting an EventListener to the Delete Button on Tasks. At the bottom of the function, after our code that handles the "Done" button, create a new if statement to check if the event.target.classList contains the class 'delete-button' 
+  //Task 10 step 3 Setting an EventListener to the Delete Button on Tasks. At the bottom of the function, after our code that handles the "Done" button, create a new if statement to check if the event.target.classList contains the class 'delete-button'
   else if (event.target.classList.contains("delete-button")) {
     //If it does, get the parentTask and store it as a variable
     const li = event.target.closest("li");
@@ -179,6 +183,4 @@ taskList.addEventListener("click", function (event) {
     //Render the tasks using taskManager.render()
     //taskList.innerHTML = taskManager.save();
   }
-
 });
-
