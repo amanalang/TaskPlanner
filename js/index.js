@@ -177,8 +177,10 @@ taskList.addEventListener("click", function (event) {
     const taskId = Number(li.getAttribute("data-task-id"));
     //Delete the task, passing the taskId to taskManager.deleteTask()
     taskManager.deleteTask(taskId);
+
     //Save the tasks to localStorage using taskManager.save()
     taskList.innerHTML = taskManager.render();
+    taskManager.save();
 
     //Render the tasks using taskManager.render()
     //taskList.innerHTML = taskManager.save();

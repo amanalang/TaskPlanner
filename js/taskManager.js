@@ -1,6 +1,6 @@
 function createTaskHtml(name, desc, owner, dueDate, status, id) {
   let cssClass = status.toLowerCase().replace(" ", "");
-  const html = `<li class= "col col-12 col-md-4 mb-1 mt-1" data-task-id="${id}">
+  const html = `<li class= "col col-12 col-md-4" data-task-id="${id}">
             <div class="col border border-secondary pb-2 task-status-${cssClass}">
 
               <div class=""><strong>${name}</strong></div>
