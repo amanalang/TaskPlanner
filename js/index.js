@@ -106,7 +106,7 @@ taskManager.addTask(
   "work hard and achieve your goals",
   "Shumailakashif",
   new Date("2021-10-26"),
-  "In Progress"
+  "Review"
 );
 taskManager.addTask(
   "Practice code academy",
@@ -162,8 +162,23 @@ taskList.addEventListener("click", function (event) {
     console.log(task.status);
     taskList.innerHTML = taskManager.render();
     //after both adding a new task and updating a task's status to done, call taskManager.save() to save the tasks to localSorage
-    taskManager.save()
+    taskManager.save();
   }
-  //create a taskId variable, setting the value to the taskId data-attribute
+
+//Task 10 step 3 Setting an EventListener to the Delete Button on Tasks. At the bottom of the function, after our code that handles the "Done" button, create a new if statement to check if the event.target.classList contains the class 'delete-button' 
+  else if (event.target.classList.contains("delete-button")) {
+    //If it does, get the parentTask and store it as a variable
+    const li = event.target.closest("li");
+    //Get the taskId of the parent task from its data-task-id property - remember, since it's stored as a string in a data attribute, we need to convert it to a number, just like we did for task 8
+    const taskId = Number(li.getAttribute("data-task-id"));
+    //Delete the task, passing the taskId to taskManager.deleteTask()
+    taskManager.deleteTask(taskId);
+    //Save the tasks to localStorage using taskManager.save()
+    taskList.innerHTML = taskManager.render();
+
+    //Render the tasks using taskManager.render()
+    //taskList.innerHTML = taskManager.save();
+  }
 
 });
+

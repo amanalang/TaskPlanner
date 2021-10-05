@@ -22,14 +22,15 @@ function createTaskHtml(name, desc, owner, dueDate, status, id) {
             </div>          
         
 
-            <div class=" mt-3 text-right">         
+            <div class=" mt-3 text-right">   
+            <button input type="submit" class="${
+              status === "Done" ? "invisible" : ""
+            } btn btn-sm btn-success btn-done"><i class="bi bi-calendar-check"></i></button>      
               <button input type="submit" class="btn btn-sm btn-primary"><i class="bi bi-pen"></i>
               </button>          
-              <button input type="submit" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i>
+              <button input type="submit" class="btn btn-sm btn-danger delete-button"><i class="bi bi-trash"></i>
               </button>          
-              <button input type="submit" class="${
-                status === "Done" ? "invisible" : ""
-              } btn btn-sm btn-success btn-done"><i class="bi bi-calendar-check"></i></button>
+
             </div>
           </div>
           </li>`;
@@ -75,6 +76,24 @@ class TaskManager {
     //return the foundTask variable from the method.
     return foundTask;
   }
+      //task 10 step 2 Create the deleteTask Method on TaskManager
+  deleteTask(taskId) {
+    //create a new variable newTasks and set it to an empty array.
+    const newTasks = [];
+    //Loop over the tasks, and for each iteration: Get the current task in the loop, store it in a variable task
+    for (let i = 0; i < this.tasks.length; i++) {
+      let task = this.tasks[i];
+      //Check if task.id is not equal to the taskId passed as a parameter.
+      if (task.id !== taskId) {
+        //If the task.id is not equal to the taskId, push the task into the newTasks array.
+        newTasks.push(task);
+      }
+  }
+
+  //Set this.tasks to newTasks
+  this.tasks = newTasks;
+}
+
   render() {
     const taskHtmlList = [];
     for (let i = 0; i < this.tasks.length; i++) {
@@ -130,4 +149,4 @@ class TaskManager {
   }
 }
 //Stretch Goal-Hiding the "Done" Button For Completed Tasks
-//Stretch Goal - Change the Styling of the Task Status.
+//Stretch Goal - Change the Styling of the Task Status
