@@ -103,23 +103,23 @@ function validateTask() {
 
 if (loadedFromLocalStorage === 0) {
   taskManager.addTask(
-    "Complete your sprint2",
+    "Complete your sprint3",
     "work hard and achieve your goals",
-    "Shumailakashif",
+    "Shumaila Kashif",
     new Date("2021-10-26"),
     "Review"
   );
   taskManager.addTask(
     "Practice code academy",
     "work hard and achieve your goals",
-    "Shumailakashif",
+    "Jensen",
     new Date("2021-09-26"),
     "Done"
   );
   taskManager.addTask(
-    "Complete your sprint2",
+    "Complete your Final Project",
     "work hard and achieve your goals",
-    "Shumailakashif",
+    "Arman",
     new Date("2021-10-26"),
     "IN progress"
   );
