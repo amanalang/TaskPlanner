@@ -1,5 +1,6 @@
 # TaskPlanner
-**FINAL PROJECT** Junior Web Developer Bootcamp, 13-week intensive web development program by Generation Australia and facilitated by AcademyXi
+**FINAL PROJECT** 
+Junior Web Developer Bootcamp, 13-week intensive web development program by Generation Australia and facilitated by AcademyXi
 
 ## Best Group in the Cohort!!!
 - Arman Manalang
