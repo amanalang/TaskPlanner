@@ -19,7 +19,10 @@ Here is our [google slides presentation](https://docs.google.com/presentation/d/
 
 The purpose of the project is to create a Task Manager that has four mai functionalities : create, display, update and delete.
 
-Wire Frame:
+# Wire Frame:
+
+This is our initial wire frame. We have made some design changes considering the UI.
+
 img
 
 # Software and Programming Languages we used to build our project:
