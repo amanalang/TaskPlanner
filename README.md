@@ -10,6 +10,7 @@ About Project:
 The purpose of the project is to create a Task Manager that has four mai functionalities : create, display, update and delete.
 
 Wire Frame:
+img
 
 Software and Programming Language we used to build our project:
 
