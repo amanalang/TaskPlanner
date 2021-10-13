@@ -1,19 +1,28 @@
-# TaskPlanner
-
 Generations Junior Web Developer cohort 6 FINAL PROJECT
+
+**FINAL PROJECT**
+Junior Web Developer Bootcamp, 13-week intensive web development program by Generation Australia and facilitated by AcademyXi
 
 Produly presented by..
 
 <img src="https://user-images.githubusercontent.com/88661877/136912582-e208b85c-ef2f-4102-9240-bf2addb2fcd7.png" width=250 height=250/>
 
-About Project:
+## Best Group in the Cohort!!!
+
+- Arman Manalang
+- Shumaila Kashif
+- Jensen Sodicta
+
+Here is our [google slides presentation](https://docs.google.com/presentation/d/19P-dh15CzTFOilVGbNdDoAAHOcnvXcTMy18kU5X_wBU/edit?usp=sharing)
+
+# About Project:
 
 The purpose of the project is to create a Task Manager that has four mai functionalities : create, display, update and delete.
 
 Wire Frame:
 img
 
-Software and Programming Language we used to build our project:
+# Software and Programming Languages we used to build our project:
 
 - Trello & Balsamiq
 - We used Visual studio code
@@ -23,7 +32,7 @@ Software and Programming Language we used to build our project:
 - JAvaScript
 - Git and Github and Chrome dev tools which is our best friend
 
-Features:
+# Features:
 
 Add New Task:
 
@@ -40,3 +49,5 @@ Update Task status to Done:
 Delete Task:
 
     The user can Delete task card that will also be deleted from task array.
+
+# Final Look of our project:
